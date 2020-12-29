@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace BusinessTripCounter
 {
-    public partial class Form1 : Form
+    public partial class Expense : Form
     {
-        public Form1()
+        public Expense()
         {
             InitializeComponent();
+        }
+
+        private void Expense_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.main.Show();
         }
     }
 }
