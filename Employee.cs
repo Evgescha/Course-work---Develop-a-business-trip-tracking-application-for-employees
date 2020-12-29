@@ -28,6 +28,7 @@ namespace BusinessTripCounter
         {
             Main.main.Show();
         }
+
         private void fixName()
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)

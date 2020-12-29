@@ -74,12 +74,6 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Expense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Expense.Designer.cs">
-      <DependentUpon>Expense.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExpenseType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,9 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Expense.resx">
-      <DependentUpon>Expense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExpenseType.resx">
       <DependentUpon>ExpenseType.cs</DependentUpon>
