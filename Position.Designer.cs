@@ -35,17 +35,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.businesstripcounterDataSet = new BusinessTripCounter.businesstripcounterDataSet();
-            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.positionTableAdapter = new BusinessTripCounter.businesstripcounterDataSetTableAdapters.positionTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.businesstripcounterDataSet = new BusinessTripCounter.businesstripcounterDataSet();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.positionTableAdapter = new BusinessTripCounter.businesstripcounterDataSetTableAdapters.positionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,36 +116,6 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(73, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Зарплата";
-            // 
-            // businesstripcounterDataSet
-            // 
-            this.businesstripcounterDataSet.DataSetName = "businesstripcounterDataSet";
-            this.businesstripcounterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // positionBindingSource
-            // 
-            this.positionBindingSource.DataMember = "position";
-            this.positionBindingSource.DataSource = this.businesstripcounterDataSet;
-            // 
-            // positionTableAdapter
-            // 
-            this.positionTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -170,6 +140,37 @@
             this.salaryDataGridViewTextBoxColumn.ReadOnly = true;
             this.salaryDataGridViewTextBoxColumn.Width = 80;
             // 
+            // positionBindingSource
+            // 
+            this.positionBindingSource.DataMember = "position";
+            this.positionBindingSource.DataSource = this.businesstripcounterDataSet;
+            // 
+            // businesstripcounterDataSet
+            // 
+            this.businesstripcounterDataSet.DataSetName = "businesstripcounterDataSet";
+            this.businesstripcounterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(73, 39);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(138, 20);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OnlyNumbers);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Зарплата";
+            // 
+            // positionTableAdapter
+            // 
+            this.positionTableAdapter.ClearBeforeFill = true;
+            // 
             // Position
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,8 +190,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Position_FormClosing);
             this.Load += new System.EventHandler(this.Position_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

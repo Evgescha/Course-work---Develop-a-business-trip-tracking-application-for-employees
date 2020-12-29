@@ -25,6 +25,14 @@ namespace BusinessTripCounter
         {
             Main.main.Show();
         }
+        private void textBox_OnlyNumbers(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8) // цифры и клавиша BackSpace
+            {
+                e.Handled = true;
+            }
+        }
 
         private void fillGrid() {
             this.positionTableAdapter.Fill(this.businesstripcounterDataSet.position);
