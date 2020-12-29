@@ -147,5 +147,107 @@ namespace BusinessTripCounter
             }
         }
 
+
+
+
+
+
+
+
+
+        // расходы на командировку
+
+
+
+        private void fillGrid2()
+        {
+            this.expenseTableAdapter.Fill(this.businesstripcounterDataSet.expense);
+        }
+        private bool isFill2()
+        {
+            if (textBox3.Text.Length < 1  || comboBox2.Items.Count < 1 || dataGridView1.CurrentRow==null)
+            {
+                MessageBox.Show("Не все поля заполнены или не выбрана командировка!");
+                return false;
+            }
+            return true;
+        }
+        private void clearFields2()
+        {
+            textBox3.Text = "";
+        }
+        //add
+        private void button1_Click222(object sender, EventArgs e)
+        {
+            if (isFill2())
+                try
+                {
+                    DataRowView row = (DataRowView)expenseibfk1BindingSource.AddNew();
+
+                    row[1] = dataGridView1.CurrentRow.Cells[0].Value;
+                    row[2] = comboBox2.SelectedValue;
+                    row[3] = textBox3.Text;
+
+                    expenseibfk1BindingSource.EndEdit();
+                    this.expenseTableAdapter.Update(businesstripcounterDataSet);
+                    clearFields2();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            fillGrid2();
+        }
+        //edit
+        private void button2_Click222(object sender, EventArgs e)
+        {
+            if (isFill2())
+                try
+                {
+                    dataGridView2.CurrentRow.Cells[2].Value = comboBox2.SelectedValue;
+                    dataGridView2.CurrentRow.Cells[3].Value = textBox3.Text;
+
+                    expenseibfk1BindingSource.EndEdit();
+                    this.expenseTableAdapter.Update(((DataRowView)dataGridView2.CurrentRow.DataBoundItem).Row);
+                    clearFields2();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            fillGrid2();
+        }
+
+        //delete
+        private void button3_Click222(object sender, EventArgs e)
+        {
+            if (dataGridView2.Rows.Count > 0 && dataGridView2.CurrentRow != null)
+            {
+                try
+                {
+                    businesstripcounterDataSet.AcceptChanges();
+                    expenseibfk1BindingSource.RemoveAt(dataGridView2.CurrentRow.Index);
+                    expenseibfk1BindingSource.EndEdit();
+                    expenseTableAdapter.Update(businesstripcounterDataSet.expense);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                fillGrid2();
+            }
+        }
+
+        private void dataGridView1_Click222(object sender, EventArgs e)
+        {
+            if (dataGridView2.Rows.Count > 0 && dataGridView2.CurrentRow != null)
+            {
+                comboBox2.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+                textBox3.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            }
+        }
+
+
+
     }
 }
