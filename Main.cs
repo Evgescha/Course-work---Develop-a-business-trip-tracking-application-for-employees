@@ -18,25 +18,41 @@ namespace BusinessTripCounter
             InitializeComponent();
             main = this;
         }
-        //поездки
+        /// <summary>
+        /// Кнопка командировки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             new BusinessTrip().Show();
             this.Hide();
         }
-        //Сотрудники
+        /// <summary>
+        /// кропка сотрудники
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             new Employee().Show();
             this.Hide();
         }
-        //должности
+        /// <summary>
+        ///  Кнопка должности
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             new Position().Show();
             this.Hide();
         }
-        //типы расходов
+        /// <summary>
+        /// Кнопка тип расходов
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             new ExpenseType().Show();

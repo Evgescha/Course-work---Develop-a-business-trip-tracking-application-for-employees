@@ -17,18 +17,30 @@ namespace BusinessTripCounter
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод загрузки формы. Инициализирует поля значениями с базы данных
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void Employee_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "businesstripcounterDataSet.position". При необходимости она может быть перемещена или удалена.
             this.positionTableAdapter.Fill(this.businesstripcounterDataSet.position);
             fillGrid();
         }
-
+        /// <summary>
+        /// Метод закрытия формы. При закрытии открывает предыдущую форму
+        /// </summary>
+        /// <param name="sender">Dходящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void Employee_FormClosing(object sender, FormClosingEventArgs e)
         {
             Main.main.Show();
         }
-
+        /// <summary>
+        /// Метод определения имен на в таблице. Поскольку из базы данных в таблице отображается только ид сущности, мы по этой ид отображаем верное текстовое
+        /// поле сущности
+        /// </summary>
         private void fixName()
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -42,7 +54,11 @@ namespace BusinessTripCounter
                 dataGridView1[3, i].Value = comboBox1.Text;
             }
         }
-
+        /// <summary>
+        /// Метод, разрешающий вставлять только определенный набор символы. Или только текст, или только цифры
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void textBox_OnlyNumbers(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
@@ -51,7 +67,9 @@ namespace BusinessTripCounter
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Метод заполнение таблицы данными из бд
+        /// </summary>
         private void fillGrid()
         {
             this.employeeTableAdapter.Fill(this.businesstripcounterDataSet.employee);

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessTripCounter.Employee">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAAAAADCIiAAABAQAACAAAQDAEw4AAABkHAAAIQAAAI=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessTripCounter.ExpenseType">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="label1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAIiAAABAAAgKAAIACAAw4AAAQkHAAAAgAAAI=</HashCode>
+      <FileName>ExpenseType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessTripCounter.Main">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEA4AAAAAHAIAAAAAAQ=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessTripCounter.Position">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QCAAAAAAIiEAABAAAgCAAAQDAAw4BAAAkHAAAIgAAAI=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessTripCounter.BusinessTrip">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="countDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="dayCountDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="employeeBindingSource" Hidden="true" />
+      <Field Name="employeeDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="employeeTableAdapter" Hidden="true" />
+      <Field Name="expenseibfk1BindingSource" Hidden="true" />
+      <Field Name="expenseTableAdapter" Hidden="true" />
+      <Field Name="expensetypeBindingSource" Hidden="true" />
+      <Field Name="expensetypeTableAdapter" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Field Name="idDataGridViewTextBoxColumn" Hidden="true" />
+      <Field Name="idDataGridViewTextBoxColumn1" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QCAAQABCIiMAABAaDgKACABiYN47AEABkHAJALACAAI=</HashCode>
+      <FileName>BusinessTrip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessTripCounter.Saver">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Saver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

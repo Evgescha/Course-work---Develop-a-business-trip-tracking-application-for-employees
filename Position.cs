@@ -16,15 +16,29 @@ namespace BusinessTripCounter
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Метод загрузки формы. Инициализирует поля значениями с базы данных
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void Position_Load(object sender, EventArgs e)
         {
             this.positionTableAdapter.Fill(this.businesstripcounterDataSet.position);
         }
+        /// <summary>
+        /// Метод закрытия формы. При закрытии открывает предыдущую форму
+        /// </summary>
+        /// <param name="sender">Dходящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void Position_FormClosing(object sender, FormClosingEventArgs e)
         {
             Main.main.Show();
         }
+        /// <summary>
+        /// Метод, разрешающий вставлять только определенный набор символы. Или только текст, или только цифры
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void textBox_OnlyNumbers(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
@@ -33,7 +47,9 @@ namespace BusinessTripCounter
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Метод заполнение таблицы данными из бд
+        /// </summary>
         private void fillGrid() {
             this.positionTableAdapter.Fill(this.businesstripcounterDataSet.position);
         }

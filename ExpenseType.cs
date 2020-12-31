@@ -16,18 +16,28 @@ namespace BusinessTripCounter
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Метод закрытия формы. При закрытии открывает предыдущую форму
+        /// </summary>
+        /// <param name="sender">Dходящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void ExpenseType_FormClosing(object sender, FormClosingEventArgs e)
         {
             Main.main.Show();
         }
-
+      /// <summary>
+        /// Метод загрузки формы. Инициализирует поля значениями с базы данных
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Входящее событие</param>
         private void ExpenseType_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "businesstripcounterDataSet.expensetype". При необходимости она может быть перемещена или удалена.
             fillGrid();
         }
-
+        /// <summary>
+        /// Метод заполнение таблицы данными из бд
+        /// </summary>
 
         private void fillGrid()
         {
