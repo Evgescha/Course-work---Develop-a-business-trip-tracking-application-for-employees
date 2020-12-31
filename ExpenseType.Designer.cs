@@ -30,18 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expensetypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.businesstripcounterDataSet = new BusinessTripCounter.businesstripcounterDataSet();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.businesstripcounterDataSet = new BusinessTripCounter.businesstripcounterDataSet();
-            this.expensetypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expensetypeTableAdapter = new BusinessTripCounter.businesstripcounterDataSetTableAdapters.expensetypeTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensetypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,16 +61,33 @@
             this.dataGridView1.Location = new System.Drawing.Point(215, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(323, 118);
+            this.dataGridView1.Size = new System.Drawing.Size(323, 150);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // expensetypeBindingSource
+            // 
+            this.expensetypeBindingSource.DataMember = "expensetype";
+            this.expensetypeBindingSource.DataSource = this.businesstripcounterDataSet;
+            // 
+            // businesstripcounterDataSet
+            // 
+            this.businesstripcounterDataSet.DataSetName = "businesstripcounterDataSet";
+            this.businesstripcounterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(10, 108);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 23);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 4;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -79,7 +97,7 @@
             this.button2.Location = new System.Drawing.Point(10, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 23);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -89,7 +107,7 @@
             this.button1.Location = new System.Drawing.Point(10, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 23);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -99,7 +117,7 @@
             this.textBox1.Location = new System.Drawing.Point(71, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -110,32 +128,26 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Название";
             // 
-            // businesstripcounterDataSet
-            // 
-            this.businesstripcounterDataSet.DataSetName = "businesstripcounterDataSet";
-            this.businesstripcounterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // expensetypeBindingSource
-            // 
-            this.expensetypeBindingSource.DataMember = "expensetype";
-            this.expensetypeBindingSource.DataSource = this.businesstripcounterDataSet;
-            // 
             // expensetypeTableAdapter
             // 
             this.expensetypeTableAdapter.ClearBeforeFill = true;
             // 
-            // nameDataGridViewTextBoxColumn
+            // button8
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.button8.Location = new System.Drawing.Point(10, 139);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(199, 23);
+            this.button8.TabIndex = 39;
+            this.button8.Text = "Сохранить в файл";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // ExpenseType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 142);
+            this.ClientSize = new System.Drawing.Size(550, 174);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -148,8 +160,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExpenseType_FormClosing);
             this.Load += new System.EventHandler(this.ExpenseType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensetypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +179,6 @@
         private System.Windows.Forms.BindingSource expensetypeBindingSource;
         private businesstripcounterDataSetTableAdapters.expensetypeTableAdapter expensetypeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button8;
     }
 }

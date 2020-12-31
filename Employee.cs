@@ -140,5 +140,10 @@ namespace BusinessTripCounter
                 comboBox1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Saver.Save(dataGridView1);
+        }
     }
 }

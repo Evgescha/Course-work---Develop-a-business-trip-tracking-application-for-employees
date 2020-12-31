@@ -43,6 +43,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.positionTableAdapter = new BusinessTripCounter.businesstripcounterDataSetTableAdapters.positionTableAdapter();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.businesstripcounterDataSet)).BeginInit();
@@ -69,7 +70,7 @@
             this.button1.Location = new System.Drawing.Point(12, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -79,7 +80,7 @@
             this.button2.Location = new System.Drawing.Point(12, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 23);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -89,7 +90,7 @@
             this.button3.Location = new System.Drawing.Point(12, 131);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 23);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -112,7 +113,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(217, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(331, 141);
+            this.dataGridView1.Size = new System.Drawing.Size(331, 173);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
@@ -155,7 +156,7 @@
             this.textBox2.Location = new System.Drawing.Point(73, 39);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBox2.TabIndex = 2;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OnlyNumbers);
             // 
             // label2
@@ -171,11 +172,22 @@
             // 
             this.positionTableAdapter.ClearBeforeFill = true;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(12, 162);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(199, 23);
+            this.button8.TabIndex = 40;
+            this.button8.Text = "Сохранить в файл";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Position
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 162);
+            this.ClientSize = new System.Drawing.Size(555, 194);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -213,5 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button8;
     }
 }
